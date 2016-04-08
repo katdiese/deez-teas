@@ -1,7 +1,18 @@
-// sample angular code
+var app = angular.module('teaApp', ['ngRoute']);
 
-var app = angular.module('myApp', []);
+app.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'partials/allTeas.html',
+      controller: 'teasController'
+    })
+    .when('/cart', {
+      templateUrl: 'partials/cart.html',
+      controller: 'cartController'
+    })
+    .otherwise('/');
+})
 
-app.controller('myController', ['$scope', function($scope) {
-  $scope.greeting = "Hello World!";
-}]);
+
+
+
