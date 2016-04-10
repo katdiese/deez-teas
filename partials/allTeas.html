@@ -1,6 +1,7 @@
 <p>
   <span class="search-bar">Search by category:</span>
-  <select ng-model="tea.category" name="category">
+  <select ng-model="searchCategory" name="category">
+    <option value="">Show All</option>
     <option value="dark">dark</option>
     <option value="cold">cold</option>
     <option value="awesome">awesome</option>
@@ -13,7 +14,7 @@
     <option value="winter">winter</option>
   </select>
   <span class="search-bar">Search by name:</span>
-  <input ng-model="tea.name" name="name">
+  <input ng-model="searchName" name="name">
 </p>
 <table class="u-full-width">
   <tr>
@@ -21,7 +22,7 @@
     <th>Information</th>
   </tr>
   <tbody>
-    <tr ng-repeat="tea in firstTea">
+    <tr ng-repeat="tea in firstTea | filter:searchName | filter:searchCategory">
       <td class="tea-image"><img ng-src="{{ tea.imageUrl }}"></td>
       <td class="tea-info">
       <h2>{{ tea.name }}</h2>
