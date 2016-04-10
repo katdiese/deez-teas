@@ -23,7 +23,16 @@
   <tbody>
     <tr ng-repeat="tea in firstTea">
       <td class="tea-image"><img ng-src="{{ tea.imageUrl }}"></td>
-      <td class="tea-info">{{ tea.name }}</td>
+      <td class="tea-info">
+      <h2>{{ tea.name }}</h2>
+      <p><strong>Price: </strong>{{ tea.price | currency }}</p>
+      <p><strong>Caffeine Scale: </strong></p>
+      <p><strong>Ingredients: </strong></p>
+      <p><strong>Rating: </strong></p>
+      <p ng-show="{{tea.inStock}}"><strong>In Stock? </strong>Yes</p>
+      <p ng-show="{{!tea.inStock}}"><strong>In Stock? </strong>No</p>
+      <p><strong></strong></p>
+      </td>
     </tr>
   </tbody>
 
