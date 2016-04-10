@@ -1,2 +1,30 @@
-{{ message }}
-{{ firstTea }}
+<p>
+  <span class="search-bar">Search by category:</span>
+  <select ng-model="tea.category" name="category">
+    <option value="dark">dark</option>
+    <option value="cold">cold</option>
+    <option value="awesome">awesome</option>
+    <option value="dry">dry</option>
+    <option value="hot">hot</option>
+    <option value="summer">summer</option>
+    <option value="lucid">lucid</option>
+    <option value="warm">warm</option>
+    <option value="spring">spring</option>
+    <option value="winter">winter</option>
+  </select>
+  <span class="search-bar">Search by name:</span>
+  <input ng-model="tea.name" name="name">
+</p>
+<table class="u-full-width">
+  <tr>
+    <th>Tea</th>
+    <th>Information</th>
+  </tr>
+  <tbody>
+    <tr ng-repeat="tea in firstTea">
+      <td class="tea-image"><img ng-src="{{ tea.imageUrl }}"></td>
+      <td class="tea-info">{{ tea.name }}</td>
+    </tr>
+  </tbody>
+
+</table>
