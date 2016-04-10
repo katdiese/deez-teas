@@ -26,12 +26,16 @@
       <td class="tea-info">
       <h2>{{ tea.name }}</h2>
       <p><strong>Price: </strong>{{ tea.price | currency }}</p>
-      <p><strong>Caffeine Scale: </strong></p>
-      <p><strong>Ingredients: </strong></p>
-      <p><strong>Rating: </strong></p>
+      <p><strong>Caffeine Scale: </strong>{{ tea.caffeineScale }}</p>
+      <p><strong>Ingredients: </strong>{{ tea.ingredients }}</p>
+      <p><strong>Rating: </strong>{{ tea.rating }}</p>
       <p ng-show="{{tea.inStock}}"><strong>In Stock? </strong>Yes</p>
       <p ng-show="{{!tea.inStock}}"><strong>In Stock? </strong>No</p>
-      <p><strong></strong></p>
+      <p><strong>Categories: </strong>
+        <ul>
+          <li ng-repeat="category in tea.categories">{{ category }}</li>
+        </ul>
+      </p>
       </td>
     </tr>
   </tbody>
