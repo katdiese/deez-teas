@@ -124,6 +124,7 @@ app.service("teaService", function() {
   ];
   return {
     getTeas: function() {
+        console.log(allTeas);
       return allTeas;
     }
   }
