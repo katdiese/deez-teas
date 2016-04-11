@@ -126,17 +126,12 @@ app.service("teaService", function() {
   var totalPrice = 0;
   return {
     getTeas: function() {
-      // allTeas.map(function(el) {
-      //     return el.price = el.price * .01
-      // })
-      console.log(allTeas);
     return allTeas;
     },
     addToCart: function(item, amount) {
       for(i = 0; i < amount; i++) {
         cart.push(item);
       }
-      console.log(cart);
     },
     getCart: function() {
       return cart;
