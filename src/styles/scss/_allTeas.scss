@@ -15,3 +15,16 @@
     width: 6rem;
   }
 }
+.cartLink {
+  float: right;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darken(red, 10%);
+    color: white;
+  }
+}

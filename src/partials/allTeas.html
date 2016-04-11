@@ -16,6 +16,7 @@
   <span class="search-bar">Search by name:</span>
   <input ng-model="searchName" name="name">
 </p>
+<a class="cartLink" href="/#/cart"><strong>Checkout | </strong> In Cart: {{ itemsInCart() }} </a>
 <table class="u-full-width">
   <tr>
     <th>Tea</th>
@@ -37,7 +38,7 @@
       <button ng-click="addToCart(tea, quantity)">Add To Cart</button>
       </div>
       <h2>{{ tea.name }}</h2>
-      <p><strong>Price: </strong>{{ tea.price | currency }}</p>
+      <p><strong>Price: </strong>{{ tea.price | realCurrency | currency }}</p>
       <p><strong>Caffeine Scale: </strong>{{ tea.caffeineScale }}</p>
       <p><strong>Ingredients: </strong>{{ tea.ingredients }}</p>
       <p><strong>Rating: </strong>{{ tea.rating }}</p>
