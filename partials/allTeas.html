@@ -31,6 +31,11 @@
     <tr ng-repeat="tea in getTeas | orderBy:sortPrice | filter:searchName | filter:searchCategory">
       <td class="tea-image"><img ng-src="{{ tea.imageUrl }}"></td>
       <td class="tea-info">
+      <div class="addToCart">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" ng-model="quantity">
+      <button ng-click="addToCart(tea, quantity)">Add To Cart</button>
+      </div>
       <h2>{{ tea.name }}</h2>
       <p><strong>Price: </strong>{{ tea.price | currency }}</p>
       <p><strong>Caffeine Scale: </strong>{{ tea.caffeineScale }}</p>

@@ -7,3 +7,8 @@
 .sort-price {
   float: right;
   margin-left: 15px; }
+
+.addToCart {
+  float: right; }
+  .addToCart input {
+    width: 6rem; }
