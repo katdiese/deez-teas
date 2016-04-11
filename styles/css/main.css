@@ -12,3 +12,14 @@
   float: right; }
   .addToCart input {
     width: 6rem; }
+
+.cartLink {
+  float: right;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 5px; }
+  .cartLink:hover {
+    background-color: #cc0000;
+    color: white; }
