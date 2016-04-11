@@ -127,6 +127,7 @@ app.service("teaService", function() {
       allTeas.map(function(el) {
           return el.price = el.price * .01
       })
+      console.log(allTeas);
     return allTeas;
     }
   }
