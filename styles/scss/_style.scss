@@ -1,0 +1,26 @@
+$grey: #d3d3d3;
+
+header {
+  text-align: center;
+  margin-bottom: 10vh;
+
+  a {
+    padding: 5px;
+  }
+
+  .hero {
+    background-image: url('https://images.unsplash.com/photo-1459347003562-525a24ac80a6?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1100');
+    background-size: cover;
+    height: 50vh;
+    color: white;
+    display: flex;
+
+    .hero-intro {
+      margin: auto;
+    }
+  }
+
+  nav {
+    border: 1px solid $grey;
+  }
+}
