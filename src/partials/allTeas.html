@@ -19,10 +19,16 @@
 <table class="u-full-width">
   <tr>
     <th>Tea</th>
-    <th>Information</th>
+    <th>Information
+    <select class="sort-price" ng-model="sortPrice" id="sort-price">
+      <option value="price">Least Expensive</option>
+      <option value="-price">Most Expensive</option>
+    </select>
+    <label class="sort-price" for="sort-price">Sort By Price: </label>
+    </th>
   </tr>
   <tbody>
-    <tr ng-repeat="tea in firstTea | filter:searchName | filter:searchCategory">
+    <tr ng-repeat="tea in getTeas | orderBy:sortPrice | filter:searchName | filter:searchCategory">
       <td class="tea-image"><img ng-src="{{ tea.imageUrl }}"></td>
       <td class="tea-info">
       <h2>{{ tea.name }}</h2>
