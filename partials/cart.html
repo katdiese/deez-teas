@@ -9,6 +9,7 @@
       <td>
         <h2>{{ item.name }}</h2>
         <p>Price: {{ item.price | realCurrency | currency }}</p>
+        <button ng-click="removeItem(item)">Remove Item</button>
       </td>
     </tr>
   </table>
