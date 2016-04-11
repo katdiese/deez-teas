@@ -123,7 +123,6 @@ app.service("teaService", function() {
     }
   ];
   var cart = [];
-  var totalPrice = 0;
   return {
     getTeas: function() {
     return allTeas;
@@ -135,6 +134,12 @@ app.service("teaService", function() {
     },
     getCart: function() {
       return cart;
+    },
+    removeItem: function(item) {
+      console.log(item);
+      var index = cart.indexOf(item);
+      console.log(index);
+      cart.splice(index, 1);
     }
   }
 });

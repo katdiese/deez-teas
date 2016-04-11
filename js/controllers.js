@@ -20,6 +20,10 @@ app.controller('cartController', ['$scope', 'teaService', function($scope, teaSe
       $scope.totalCost += el.price;
     })
   }
+  $scope.removeItem = function(item) {
+    $scope.totalCost -= item.price;
+    teaService.removeItem(item);
+  }
   $scope.calcTotal($scope.getCart);
 }])
 
