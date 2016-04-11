@@ -10,6 +10,12 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/cart.html',
       controller: 'cartController'
     })
+    .when('/about', {
+      templateUrl: 'partials/about.html'
+    })
+    .when('/contact', {
+      templateUrl: 'partials/contact.html'
+    })
     .otherwise('/');
 })
 
