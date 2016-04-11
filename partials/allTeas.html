@@ -1,39 +1,4 @@
 <search-bar></search-bar>
 <parent-div></parent-div>
-<table class="u-full-width">
-  <tr>
-    <th>Tea</th>
-    <th>Information
-    <select class="sort-price" ng-model="sortPrice" id="sort-price">
-      <option value="price">Least Expensive</option>
-      <option value="-price">Most Expensive</option>
-    </select>
-    <label class="sort-price" for="sort-price">Sort By Price: </label>
-    </th>
-  </tr>
-  <tbody>
-    <tr ng-repeat="tea in getTeas | orderBy:sortPrice | filter:searchName | filter:searchCategory">
-      <td class="tea-image"><img ng-src="{{ tea.imageUrl }}"></td>
-      <td class="tea-info">
-      <div class="addToCart">
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" ng-model="quantity">
-      <button ng-click="addToCart(tea, quantity)">Add To Cart</button>
-      </div>
-      <h2>{{ tea.name }}</h2>
-      <p><strong>Price: </strong>{{ tea.price | realCurrency | currency }}</p>
-      <p><strong>Caffeine Scale: </strong>{{ tea.caffeineScale }}</p>
-      <p><strong>Ingredients: </strong>{{ tea.ingredients }}</p>
-      <p><strong>Rating: </strong>{{ tea.rating }}</p>
-      <p ng-show="{{tea.inStock}}"><strong>In Stock? </strong>Yes</p>
-      <p ng-show="{{!tea.inStock}}"><strong>In Stock? </strong>No</p>
-      <p><strong>Categories: </strong>
-        <ul>
-          <li ng-repeat="category in tea.categories">{{ category }}</li>
-        </ul>
-      </p>
-      </td>
-    </tr>
-  </tbody>
 
-</table>
+
