@@ -122,6 +122,7 @@ app.service("teaService", function() {
         "categories": ["spring", "warm","winter"]
     }
   ];
+  var cart = [];
   return {
     getTeas: function() {
       allTeas.map(function(el) {
@@ -129,6 +130,12 @@ app.service("teaService", function() {
       })
       console.log(allTeas);
     return allTeas;
+    },
+    addToCart: function(item, amount) {
+      for(i = 0; i < amount; i++) {
+        cart.push(item);
+      }
+      console.log(cart);
     }
   }
 });
