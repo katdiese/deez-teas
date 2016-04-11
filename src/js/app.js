@@ -6,8 +6,8 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/allTeas.html'
     })
     .when('/cart', {
-      templateUrl: 'partials/cart.html',
-      controller: 'cartController'
+      templateUrl: 'partials/cart.html'
+      // controller: 'cartController'
     })
     .when('/about', {
       templateUrl: 'partials/about.html'
