@@ -3,10 +3,10 @@ var app = angular.module('teaApp', ['ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'components/all-teas-main/allTeas.html'
+      template: '<search-bar></search-bar><parent-div></parent-div>'
     })
     .when('/cart', {
-      templateUrl: 'components/cart-main/cart.html'
+      template: '<cart-parent></cart-parent>'
     })
     .when('/about', {
       templateUrl: 'partials/about.html'
