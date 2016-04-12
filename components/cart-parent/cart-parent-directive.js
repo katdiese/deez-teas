@@ -8,7 +8,7 @@ app.directive('cartParent', function() {
         $scope.getCart = teaService.getCart();
         $scope.totalCost = 0;
         $scope.calcTotal = function(cart) {
-          cart.map(function(el) {
+          cart.forEach(function(el) {
             $scope.totalCost += el.price;
           })
         }

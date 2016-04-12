@@ -125,7 +125,7 @@ app.service("teaService", function() {
   var cart = [];
   return {
     getTeas: function() {
-    return allTeas;
+      return allTeas;
     },
     addToCart: function(item, amount) {
       for(i = 0; i < amount; i++) {
