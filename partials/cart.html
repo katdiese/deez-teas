@@ -1,17 +1,1 @@
-<div class="cart-items">
-  <table class="u-full-width">
-    <tr>
-      <th>Tea</th>
-      <th>Information</th>
-    </tr>
-    <tr ng-repeat="item in getCart track by $index">
-      <td><img ng-src="{{ item.imageUrl }}"></td>
-      <td>
-        <h2>{{ item.name }}</h2>
-        <p>Price: {{ item.price | realCurrency | currency }}</p>
-        <button ng-click="removeItem(item)">Remove Item</button>
-      </td>
-    </tr>
-  </table>
-</div>
-<h2>Total Cost: {{ totalCost | realCurrency | currency }}</h2>
+<cart-parent></cart-parent>
