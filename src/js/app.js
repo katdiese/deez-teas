@@ -16,7 +16,7 @@ app.config(function($routeProvider, $locationProvider) {
     })
     .otherwise('/');
 
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 });
 
 
