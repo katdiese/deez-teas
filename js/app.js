@@ -1,6 +1,6 @@
 var app = angular.module('teaApp', ['ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       template: '<search-bar></search-bar><parent-div></parent-div>'
@@ -15,7 +15,9 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/contact.html'
     })
     .otherwise('/');
-})
+
+    $locationProvider.html5Mode(true);
+});
 
 
 
