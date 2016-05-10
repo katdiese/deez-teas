@@ -1,6 +1,9 @@
 .tea-image {
   width: 30%; }
 
+.search-area {
+  padding-left: 25px; }
+
 .tea-info {
   width: 70%; }
 
@@ -27,15 +30,41 @@
 header {
   text-align: center;
   margin-bottom: 10vh; }
+  header nav {
+    background: white;
+    height: 5rem; }
   header a {
-    padding: 5px; }
+    padding: 20px;
+    font-size: 2.5rem;
+    color: #8b8878;
+    text-decoration: none; }
+    header a:hover {
+      color: #545349; }
+  header .welcome {
+    font-family: 'White Rabbit';
+    color: black;
+    font-size: 9rem; }
+  header .descrip {
+    color: black;
+    font-weight: bold;
+    font-size: 3rem; }
   header .hero {
-    background-image: url("https://images.unsplash.com/photo-1459347003562-525a24ac80a6?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1100");
+    background-image: url("http://1.bp.blogspot.com/-kY7ZY0Ui0Rs/ULaXsj4UigI/AAAAAAAAAOs/dfC6oVWQJGU/s1600/Tiesta's+teas+loose.png");
     background-size: cover;
     height: 50vh;
     color: white;
     display: flex; }
     header .hero .hero-intro {
       margin: auto; }
-  header nav {
-    border: 1px solid #d3d3d3; }
+
+.founder {
+  width: 70%;
+  border-radius: 50%;
+  margin-left: 15%; }
+
+iframe {
+  width: 100%;
+  margin-bottom: 30px; }
+
+body {
+  background: #eee8dc; }

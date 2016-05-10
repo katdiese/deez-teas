@@ -1,3 +1,9 @@
 @import "allTeas";
 @import "cart";
 @import "style";
+
+$main-background: #eee8dc;
+
+body {
+  background: $main-background;
+}
